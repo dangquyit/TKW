@@ -7,6 +7,9 @@
     <title>Trang Chủ</title>
     <link rel="stylesheet" href="assets/style/style.css" />
     <link rel="stylesheet" href="assets/style/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/brands.min.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/solid.min.css">
   </head>
   <body>
     <div id="wrapper">
@@ -16,9 +19,11 @@
             <li class="header__item">
               <a href="" class="header__link">
                 <img src="assets/image/logo.png" alt="" class="header__img" />
+               
               </a>
+              <span class="menu-icon" onclick="clickMenu()"><i class="fa-solid fa-bars"></i></span>
             </li>
-            <li class="header__item">
+            <li class="header__item"> 
               <p class="header__time">Thứ 2, 31/10/2022</p>
             </li>
           </ul>
@@ -35,6 +40,7 @@
             </li>
             <li class="header__item">
               <input type="text" class="header__search" placeholder="Search" />
+              <span class="search-icon"><i class="fa-solid fa-magnifying-glass "></i></span>
             </li>
           </ul>
         </div>
@@ -298,5 +304,18 @@
         </div>
       </div>
     </div>
+    <script>
+      function clickMenu() {
+        let menuElm = document.querySelector("#menu");
+        if(menuElm.classList.contains("show")) {
+          menuElm.classList.remove("show");
+          menuElm.classList.add("hide");
+        } else {
+          menuElm.classList.remove("hide");
+          menuElm.classList.add("show");
+        }
+      }
+
+    </script>
   </body>
 </html>

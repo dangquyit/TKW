@@ -91,6 +91,11 @@
     
 }
 
+.menu-icon,
+.search-icon {
+    display: none;
+}
+
 /* end header */
 
 /* start menu */
@@ -259,3 +264,168 @@ svg {
     width: 20px;
 }
 /* end footer */
+
+/* Tablet */
+@media(min-width: 740px) and (max-width: 1023px) {
+    #header {
+        padding: 0 10px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .header__new,
+    .header__search,
+    .header__titlem,
+    .header__left {
+        font-size: 11px;
+    }
+
+    
+
+    #banner {
+        padding: 0;
+    }
+
+    #content {
+        padding: 16px 10px;
+    }
+
+    .post-link {
+        display: block;
+    }
+    
+    .content__wrapper {
+        position: relative;
+    }
+
+
+    #menu {
+        padding: 0;
+    }
+
+    .margin-b-12 {
+        width: 100%;
+    }
+
+    
+}
+
+/* Mobile */
+@media(max-width: 740px) {
+    #content {
+        /* display: none; */
+       padding: 16px 10px;
+    }
+
+    .content__wrapper {
+        display: flex;
+    flex-direction: column-reverse;
+    object-fit: contain;
+    }
+
+    .content__right-img,
+    .post-link-right-img,
+    .content__left {
+        width: 100%;
+    }
+
+    .content__left {
+        padding: 0;
+    }
+
+    
+    .post-link {
+        display: block;
+    }
+
+    #menu {
+        padding: 0;
+        position: absolute;
+        display: none;
+    }
+
+    .menu__list {
+        display: block;
+        background-color: #78b43d;
+    }
+
+    .menu__item {
+        width: 100%;
+        text-align: start;
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .menu__item-link {
+        color: white;
+    }
+    #header {
+        padding: 0 10px;
+        word-wrap: break-word;
+        text-align: center;
+        position: relative;
+    }
+
+    #banner {
+        padding: 0;
+    }
+
+    .header__new,
+    .header__search,
+    .header__titlem,
+    .header__left {
+        font-size: 12px;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__link {
+        display: none;
+    }
+
+    .header__item {
+        padding: 0 10px;
+    }
+
+    .menu-icon ,
+    .search-icon {
+        display: block;
+        color: white;
+        font-size: 20px;
+
+    }
+
+
+
+    .footer__content {
+        display: block;
+        padding: 16px 0;
+    }
+
+    .footer__coppyright,
+    .footer__address {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .footer__address p,
+    .footer__coppyright p {
+        margin: 5px 0;
+    }
+
+    .footer__logo-link {
+        width: 100%;
+        top: 100%;
+    }
+
+    
+
+}
