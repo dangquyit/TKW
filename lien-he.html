@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ</title>
+  </head>
+  <body>
+    <h1>Liên hệ</h1>
+    <form action="" onsubmit="return submitForm()">
+      <input name="name" id="name" type="text" placeholder="Tên" />
+      <br /><br />
+      <input name="email" id="email" type="text" placeholder="Email" />
+      <br /><br />
+      <input name="subject" id="subject" type="text" placeholder="Subject" />
+      <br /><br />
+      <input name="message" id="message" type="text" placeholder="Message" />
+      <br /><br />
+      <input class="btn-submit" type="submit" value="Submit" />
+      <br /><br />
+    </form>
+    <script>
+      function validateEmail(email) {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      }
+
+      function submitForm() {
+        let isPassed = true;
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let subject = document.querySelector("#subject").value;
+        let message = document.querySelector("#message").value;
+
+        if (name == null || name == "") {
+          alert("Không được để trống tên của bạn");
+          isPassed = false;
+        }
+
+        if (email == null || email == "") {
+          alert("Không được để trống email của bạn");
+          isPassed = false;
+        } else {
+          if (!validateEmail(email)) {
+            alert("Email không hợp lệ");
+            isPassed = false;
+          }
+        }
+
+        if (subject == null || subject == "") {
+          alert("Không được để trống subject");
+          isPassed = false;
+        }
+
+        if (message == null || message == "") {
+          alert("Không được để trống message");
+          isPassed = false;
+        }
+        if (isPassed) {
+          alert("Gửi thành công");
+        }
+        return isPassed;
+      }
+    </script>
+  </body>
+</html>
