@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang Chủ</title>
+    <link rel="stylesheet" href="assets/style/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/brands.min.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/solid.min.css">
   </head>
   <body>
     <div id="wrapper">
+      <!-- Start header -->
       <div id="header">
         <div class="header__left">
           <ul class="header__list">
@@ -45,7 +46,9 @@
           </ul>
         </div>
       </div>
+      <!-- End header -->
 
+      <!-- Start menu -->
       <div id="menu">
         <ul class="menu__list">
           <li class="menu__item">
@@ -79,15 +82,19 @@
             <a class="menu__item-link" href="">Hậu trường</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link" href="">More</a>
+            <a class="menu__item-link" href="lien-he.html">Liên hệ</a>
           </li>
         </ul>
       </div>
+      <!-- End menu -->
 
+      <!-- Start banner -->
       <div id="banner">
         <img class="banner__gif" src="assets/image/banner.png" alt="" />
       </div>
+      <!-- End banner -->
 
+      <!-- Start content -->
       <div id="content">
         <h2 class="content__title">Tin thể thao mới nhất</h2>
         <div class="content__wrapper">
@@ -214,7 +221,9 @@
           </div>
         </div>
       </div>
+      <!-- End content -->
 
+      <!-- Start footer -->
       <div id="footer">
         <div class="footer__content">
           <a href="" class="footer__logo-link">
@@ -303,19 +312,8 @@
           </div>
         </div>
       </div>
+      <!-- End footer -->
     </div>
-    <script>
-      function clickMenu() {
-        let menuElm = document.querySelector("#menu");
-        if(menuElm.classList.contains("show")) {
-          menuElm.classList.remove("show");
-          menuElm.classList.add("hide");
-        } else {
-          menuElm.classList.remove("hide");
-          menuElm.classList.add("show");
-        }
-      }
-
-    </script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
